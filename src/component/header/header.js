@@ -7,16 +7,16 @@ import location from '../../Assets/logos/location.svg'
 const Header = () => {
     return (
         <div id="header">
-            <img id="logo" src={amazonlogo}></img>
+            <img id="logo" alt="logo" src={amazonlogo}></img>
             <div id="address">
-                <img src={location} id="location" />
+                <img src={location} alt="location" id="location" />
 
                 <span> Hello<div>Select your address</div></span>
             </div>
             <div id="input">
                 <button id="dropcat">All</button>
                 <input type="text" />
-                <div id="search"><img src={search}></img></div>
+                <div id="search"><img alt="search" src={search}></img></div>
             </div>
             <div id="signin">
                 Hello.Sign in<br />
