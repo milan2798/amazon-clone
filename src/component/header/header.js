@@ -3,6 +3,7 @@ import amazonlogo from '../../Assets/logos/amazon-2.svg'
 import search from '../../Assets/logos/search.svg'
 import cart from '../../Assets/logos/cart.svg'
 import location from '../../Assets/logos/location.svg'
+import {Link} from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -19,8 +20,9 @@ const Header = () => {
                 <div id="search"><img alt="search" src={search}></img></div>
             </div>
             <div id="signin">
+                <Link to="/signin">
                 Hello.Sign in<br />
-                <div>Account 	&#38; Lists</div>
+                <div>Account 	&#38; Lists</div></Link>
             </div>
             <div id="orders">
                 Returns<br />
