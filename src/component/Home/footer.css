@@ -1,0 +1,21 @@
+#footer{
+    background-color: #232f3e;
+    display: flex;
+    padding: 50px;
+    color: #fff;
+    justify-content: space-around;
+}
+#ifooter{
+    background-color: #37475a;
+    text-align: center;
+    padding: 15px 20px;
+
+  
+}
+#footer a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+
+  
+}

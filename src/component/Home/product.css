@@ -1,0 +1,57 @@
+.product{
+    padding: 20px;
+    height: 400px;
+    width: 400px;
+    background-color:rgb(255, 255, 255) ;
+    margin-bottom: 40px;
+    line-height: 20px;
+}
+
+.product img{
+    max-height: 196px;
+    margin: 10px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.product p{
+    margin: 5px;
+}
+.product p:nth-child(2){
+    color: rgb(85, 85, 85);
+}
+.product .star{
+    width: 15px;
+    height: 15px;
+    margin: 2px;
+}
+.product .stars{
+   display: flex;
+   justify-content: flex-start;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.product button{
+    text-align: center;
+    height: 30px;
+    background:linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    border-width: 1px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background 2s;
+}
+.product button:hover{
+    background:linear-gradient(to bottom,#d8c28f,#d3a93f);
+    cursor: pointer;
+}
+.Toastify__toast--default {
+    color: #111;
+}
