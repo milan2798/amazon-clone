@@ -1,0 +1,39 @@
+#swipable{
+    background-color: #141922;
+    height: 100vh;
+    color: honeydew;
+}
+
+.MuiListItemIcon-root{
+    color: honeydew !important;
+}
+
+.MuiListItem-gutters {
+    margin-top: 5px;
+}
+.MuiListItem-gutters:hover{
+  background-color: #283244 !important;
+}
+#swipable_btn{
+    background-color: #141922;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 7px;
+    color: honeydew;
+    
+}
+#swipable_btn button .MuiButton-label .MuiSvgIcon-root{
+    font-size: 35px !important;
+    color: honeydew;
+}
+#swipable_btn div:nth-child(2){
+    flex: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#swipable_btn div:nth-child(1){
+    flex: 1;
+    cursor: pointer;
+}

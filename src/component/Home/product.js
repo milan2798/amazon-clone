@@ -21,7 +21,8 @@ const Product= ({ pdetail }) => {
                 .set({
                   carts:cart ,
                   email:auth.currentUser.email
-                });
+                })
+                .catch((error)=>console.log("Product add error",error));
             }
             
         }

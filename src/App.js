@@ -8,10 +8,27 @@ import Cartspage from './component/carts/cartspage'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { auth, db } from './component/firesetup/fireconfig';
 import { useState, useEffect } from 'react';
+import SwipeableTemporaryDrawer from "./component/Home/swipabledrawer";
 
 function App() {
   const [dis, dispatch] = useState({});
- 
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    }
+  };
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+    console.log(windowDimensions);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
   useEffect(() => {
 
@@ -30,7 +47,7 @@ function App() {
     //   console.log("c---data",json.data);
     // }
     //  fetchData();
-    if(auth.currentUser != null){
+    if (auth.currentUser != null) {
       let docRef = db.collection("products").doc(auth.currentUser.email);
       docRef.get().then((doc) => {
         if (doc.exists) {
@@ -44,13 +61,13 @@ function App() {
       }).catch((error) => {
         console.log("Error getting document:", error);
       });
-  }
-  return()=>{
+    }
+    return () => {
 
-  }
-},[auth.currentUser]);
-    
-useEffect(() => {
+    }
+  }, [auth.currentUser]);
+
+  useEffect(() => {
     //will only run once the app component loads...
     auth.onAuthStateChanged((authUser) => {
       // console.log("The user is >>>>", authUser);
@@ -58,7 +75,7 @@ useEffect(() => {
       // console.log("CC--uuser",auth.currentUser)
       if (authUser) {
         //the user just logged in the user was logged in
-       
+
         dispatch({
           type: "SET_USER",
           user: authUser,
@@ -74,8 +91,8 @@ useEffect(() => {
     // return () => {
     //   cleanup
     // }
-    return()=>{
-    
+    return () => {
+
     }
   }, []);
   const [carts, addCart] = useState([]);
@@ -92,17 +109,19 @@ useEffect(() => {
             <Signup />
           </Route>
           <Route path="/home">
+            {windowDimensions.width > 1000 ? <Header /> : <SwipeableTemporaryDrawer />}
             <Home />
           </Route>
           <Route path="/carts">
-            <Header />
+            {windowDimensions.width > 1000 ? <Header /> : <SwipeableTemporaryDrawer />}
             <Cartspage />
           </Route>
           <Route path="/">
+            {windowDimensions.width > 1000 ? <Header /> : <SwipeableTemporaryDrawer />}
             <Home />
           </Route>
           <Route path="/header">
-            <Header />
+            {windowDimensions.width > 1000 ? <Header /> : <SwipeableTemporaryDrawer />}
           </Route>
         </Switch>
       </Router>

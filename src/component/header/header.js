@@ -1,8 +1,6 @@
 import './header.css'
 import amazonlogo from '../../Assets/logos/amazon-2.svg'
 import search from '../../Assets/logos/search.svg'
-import cart from '../../Assets/logos/cart.svg'
-import location from '../../Assets/logos/location.svg'
 import { Link } from 'react-router-dom'
 import { auth } from '../firesetup/fireconfig';
 import { useState, useEffect } from 'react'
@@ -13,6 +11,9 @@ import { useContext } from 'react'
 import ipLocation from 'iplocation';
 import axios from 'axios';
 import 'cors'
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+
 
 
 
@@ -25,8 +26,8 @@ const Header = () => {
         auth.signOut().then(() => {
             notify();
             // console.log("signout", auth);
- 
-          
+
+
             setError({ signout: true });
 
             //<Redirect to="/signin"></Redirect>
@@ -84,7 +85,7 @@ const Header = () => {
 
                 <Link to="/"><img id="logo" alt="logo" src={amazonlogo}></img></Link>
                 <div id="address">
-                    <img src={location} alt="location" id="location" />
+                    <LocationOnIcon />
                     <span> you'r in<div>{ip !== "" ? ip : "Select your address"}</div></span>
                 </div>
                 <div id="input">
@@ -94,7 +95,7 @@ const Header = () => {
                 </div>
                 <div id="signin-header">
                     {/* {console.log("Current User", auth.currentUser)} */}
-                Hello,{auth.currentUser != null ? auth.currentUser.email.slice(0, 5).toUpperCase() : "Guest"}<br />
+                    Hello,{auth.currentUser != null ? auth.currentUser.email.slice(0, 5).toUpperCase() : "Guest"}<br />
                     {auth.currentUser != null ? <div onClick={signOut}>Sign Out</div> : <Link to="/signin"><div>Sign In</div></Link>}
                 </div>
                 <div id="orders">
@@ -103,7 +104,7 @@ const Header = () => {
                 </div>
                 <Link to="/carts">
                     <div id="cart">
-                        <img alt="cart" src={cart} />
+                        <ShoppingCartIcon />
                         {/* {console.log("Carts", carts)} */}
                         <h3>{carts.length}</h3>
                         <div>cart</div>
