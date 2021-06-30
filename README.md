@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Getting Started with Amazon-React-clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I have used below tools/technology along with react functionality to create amazon clone.
 
-## Available Scripts
+npm packages : 
+1. iplocation(to find current location)
+2. ReactToastify (for toast messages)
+3. react-responsive-carousel (for carousel )
 
-In the project directory, you can run:
+Firebase:
+1. firebase authentication(Email and pass Authentication)
+2. firebase firestore to store cart data of user
 
-### `npm start`
+## Features
+* signin/signup
+* Add to cart
+* Location
+* Single Page App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Login into google Firebase portal and create a new app and you will get the your unique key 
+you can find all the syntax and implementaion overview from their docs
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Live Demo : https://clone-5ffb4.web.app/
 
-### `npm test`
+For any query/question please drop a mail to : zadfiyamilan112@gmail.com
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Below are screenshot of the implementation :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 1.HomePage 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Home![Screenshot 2021-06-05 at 11 35 42 PM](https://user-images.githubusercontent.com/41838197/120901210-144d5980-c657-11eb-92b8-d2924aa5e8b0.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 2.SignIn/SignUp
 
-### `npm run eject`
+Sign In![Screenshot 2021-06-05 at 11 36 34 PM](https://user-images.githubusercontent.com/41838197/120901227-2af3b080-c657-11eb-9a9c-83e29edc7c03.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 3.Carts 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Carts ![Screenshot 2021-06-05 at 11 37 37 PM](https://user-images.githubusercontent.com/41838197/120901237-3c3cbd00-c657-11eb-92d7-b25a83f517d4.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I have used photos and logos only for learning purpose Copyright reside with original owner.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
